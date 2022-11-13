@@ -5,7 +5,7 @@ import com.ib.client.EClientSocket;
 public class OrderSubmitter {
     private final OrderManager orderManager;
 
-    OrderSubmitter(Connection connection, EClientSocket eClientSocket){
+    public OrderSubmitter(Connection connection, EClientSocket eClientSocket){
         this.orderManager = new OrderManager(connection, eClientSocket);
     }
 

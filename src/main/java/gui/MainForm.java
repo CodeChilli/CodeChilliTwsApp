@@ -6,6 +6,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class MainForm extends JFrame {
     private JPanel mainPanel;
@@ -46,6 +48,43 @@ public class MainForm extends JFrame {
         cancel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        mainPanel.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                switch (e.getKeyCode()) {
+
+                    case KeyEvent.VK_1:
+
+                        System.out.println("Key \"1\" Pressed");
+                        break;
+
+                    case KeyEvent.VK_2:
+                        System.out.println("Key \"2\" Pressed");
+                        break;
+
+                    case KeyEvent.VK_3:
+                        System.out.println("Key \"3\" Pressed");
+                        break;
+
+                    case KeyEvent.VK_DELETE:
+                        System.out.println("Key \"Delete\" Pressed");
+                        break;
+
+                    //Issue Buy Order
+                    case KeyEvent.VK_UP:
+                        System.out.println("Key \"UP\" Pressed");
+                        break;
+
+                    //Issue Sell  Order
+                    case KeyEvent.VK_DOWN:
+                        System.out.println("Key \"DOWN\" Pressed");
+                        break;
+
+                }
 
             }
         });
